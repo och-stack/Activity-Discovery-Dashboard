@@ -124,7 +124,8 @@ async function getActivity() { // Ask the API for a random activity
   const activity = await response.json(); // Turn the API response into usable data
   currentActivity = activity; // Remember the activity we just received
   activityName.textContent = activity.activity; // Show the activity name
-  activityDetails.innerHTML = ` // Show the activity information
+  // Show the activity information
+  activityDetails.innerHTML = ` 
     <p>Type: ${activity.type}</p> 
     <p>Participants: ${activity.participants}</p>
     <p>Price: ${activity.price}</p>
@@ -157,7 +158,8 @@ function showSavedActivities() { // Display all activities the user has saved
     }
 
     savedActivities.forEach(function(activity, index) { // Go through each saved activity
-      list.innerHTML += ` // Add the activity to the list
+        // Add the activity to the list
+        list.innerHTML += `
         <li>
           <div class="saved-content">
             <div>
