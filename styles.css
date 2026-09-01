@@ -48,10 +48,6 @@ h1, h2, h3 {
   cursor: pointer;
 }
 
-#activity-container {
-  display:none;
-}
-
 .saved-content {
   display: flex;
   justify-content: space-between;

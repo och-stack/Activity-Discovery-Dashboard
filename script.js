@@ -86,7 +86,7 @@ const welcomeUser = document.getElementById("welcome-user"); // Get the place wh
 function dashboard() { // Move the user from login to the dashboard
     authCard.style.display = "none"; // Hide the login card
     dashboardPage.style.display = "block"; // Show the dashboard
-    welcomeUser.textContent = "Hey you, " + registeredUsername + "!"; // Say hello using the username
+    welcomeUser.textContent = "Hey you, " + registeredUsername + "!" + "👋"; // Say hello using the username
 }
 
 // Authentication events
