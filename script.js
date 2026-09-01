@@ -64,11 +64,17 @@ function signup() {
     registeredUsername = newUsername;
     registeredPassword = newPassword;
 
-    //clear password field
+    // clear fields
     passwordInput.value = "";
     confirmPasswordInput.value = "";
 
-    //show message
+    // switch back to login
+    isSignupMode = false;
+    authButton.textContent = "Login";
+    toggleLink.textContent = "Sign up";
+    confirmPasswordContainer.style.display = "none";
+
+    // show message
     authMessage.textContent = "Account created. Please log in.";
 }
 
@@ -96,4 +102,6 @@ function logout(){
 authButton.addEventListener('click', handleAuth);
 toggleLink.addEventListener('click', toggleAuth);
 document.getElementById('logout-button').addEventListener('click', logout);
+
+//Activity Dashboard
 
