@@ -32,7 +32,6 @@
         <h1>Choosy Picky</h1>
       </div>
       <p>Nothing to do? Let's choose and pick something?</p>
-
       <div class="align-items-center gap-2 mt-2">
         <label for="username">Username:</label>
         <input type="text" id="username" placeholder="Enter username.">
@@ -48,7 +47,7 @@
         <input type="password" id="confirm-password" placeholder="Re-enter password.">
       </div>
 
-      <button id="auth-button" class="btn mt-3">Log In</button>
+      <button id="auth-button" class="btn w-100 mt-3">Log In</button>
 
       <p id="auth-message"></p>
 
@@ -70,7 +69,6 @@
           </div>
           <!--Right nav-->
           <div class="d-flex align-items-center gap-3 ms-auto">
-            <span id="welcome-user"></span>
             <button id="logout-button" class="btn">Log Out</button>
           </div>
         </div>
@@ -83,15 +81,17 @@
           <div class="col-md-8">
             <!--Greeting-->
             <div>
+              <h1 id="welcome-user"></h1>
               <h2>Let's have fun!</h2>
-              <p>Come to choose and pick something interesting.</p>
-              <button id="get-activity-button" class="btn">Roll it ~</button>
+              <p>Ready to click? Be choosy, be picky!</p>
+              <button id="get-activity-button" class="btn">Roll & Pick it ~</button>
             </div>
 
             <!--Activity Details-->
-            <div class="card shadow-sm p-4 border-0 mt-3">
+            <div id="activity-container" class="card shadow-sm p-4 border-0 mt-3">
+              <h3 id="activity-name">Click "Roll"</h3>
               <div id="activity-details"></div>
-              <button id="save-button" class="btn">Love it!</button>
+              <button id="save-button" class="btn w-100">Love it!</button>
             </div>
           </div>
 
@@ -99,8 +99,8 @@
           <aside class="col-md-4">
             <div class="card shadow-sm p-4 border-0">
               <h3>Saved Activities</h3>
-              <ol>
-                <li>Still bored? 🤔 Pick me, pick me, pick me up!</li>
+              <ol id="savedActivites">
+                <li>Still bored? 🤔 Pick me, pick me up!</li>
               </ol>
             </div>
           </aside>
