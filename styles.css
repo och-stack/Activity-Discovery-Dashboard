@@ -27,10 +27,6 @@ body {
   background: #EAB308;
 }
 
-#auth-card {
-  max-width: 500px;
-}
-
 h1, h2, h3 {
   font-family: 'Fredoka', sans-serif;
 }
