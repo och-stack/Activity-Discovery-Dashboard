@@ -4,14 +4,19 @@
     <title>Home</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="/favi.png?v=1">
+    <!--Font-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"/>
+    <!--Bootstrap-->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="styles.css" />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
@@ -21,21 +26,29 @@
   
   <body>
     <!--Login Authenticator Page-->
-    <div id="auth-card">
-      <img src="favi.png" alt="icon" height="30px">
-      <h1>Choosy Picky</h1>
+    <div id="auth-card" class="card shadow-sm p-4 border-0 mx-auto m-5">
+      <div class="d-flex align-items-center gap-2">
+        <img src="favi.png" alt="icon" height="30px">
+        <h1>Choosy Picky</h1>
+      </div>
       <p>Nothing to do? Let's choose and pick something?</p>
 
-      <label for="username">Username:</label>
-      <input type="text" id="username" placeholder="Enter username.">
+      <div class="d-flex align-items-center gap-2 mt-2">
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter username.">
+      </div>
 
-      <label for="password">Password:</label>
-      <input type="text" id="password" placeholder="Enter password.">
+      <div class="d-flex align-items-center gap-2 mt-2">
+        <label for="password">Password:</label>
+        <input type="text" id="password" placeholder="Enter password.">
+      </div>
 
-      <label for="confirm-password">Confirm password:</label>
-      <input type="text" id="confirm-password" placeholder="Re-enter password.">
+      <div class="d-flex align-items-center gap-2 mt-2">
+        <label for="confirm-password">Confirm password:</label>
+        <input type="text" id="confirm-password" placeholder="Re-enter password.">
+      </div>
 
-      <button id="auth-button">Log In</button>
+      <button id="auth-button" class="btn mt-3">Log In</button>
 
       <p id="auth-message"></p>
 
@@ -48,42 +61,50 @@
     <!--Dashboard-->
     <div>
       <!--Navigation-->
-      <nav>
-        <!--Left nav-->
-        <div>
-          <img src="favi.png" alt="icon" height="30px">
-          <strong>Choosy Picky</strong>
-        </div>
-        <!--Right nav-->
-        <div>
-          <span id="welcome-user"></span>
-          <button id="logout-button">Log Out</button>
+      <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+        <div class="container px-5">
+          <!--Left nav-->
+          <div class="d-flex align-items-center gap-2">
+            <img src="favi.png" alt="icon" height="30px">
+            <h3>Choosy Picky</h3>
+          </div>
+          <!--Right nav-->
+          <div class="d-flex align-items-center gap-3 ms-auto">
+            <span id="welcome-user"></span>
+            <button id="logout-button" class="btn">Log Out</button>
+          </div>
         </div>
       </nav>
 
       <!--Main Dashboard-->
-      <main>
-        <!--Greeting-->
-        <div>
-          <h2>Let's have fun!</h2>
-          <p>Come to choose and pick something intresting.</p>
-          <button id="get-activity-button">Roll it ~</button>
-        </div>
+      <main class="container px-5">
+        <div class="row mt-5 g-4">
+          <!--Left: Greeting + Activity-->
+          <div class="col-md-8">
+            <!--Greeting-->
+            <div>
+              <h2>Let's have fun!</h2>
+              <p>Come to choose and pick something interesting.</p>
+              <button id="get-activity-button" class="btn">Roll it ~</button>
+            </div>
 
-        <!--Activity Details-->
-        <div>
-          <div id="activity-details"></div>
-          <button id="save-button">Love it!</button>
-        </div>
-
-        <!--Activity Details-->
-        <aside>
-          <div>
-            <h3>Saved Activities</h3>
-            <p>Still bored?🤔 Pick me, pick me, pick me up!</p>
+            <!--Activity Details-->
+            <div class="card shadow-sm p-4 border-0 mt-3">
+              <div id="activity-details"></div>
+              <button id="save-button" class="btn">Love it!</button>
+            </div>
           </div>
-        </aside>
 
+          <!--Right: Saved Activities-->
+          <aside class="col-md-4">
+            <div class="card shadow-sm p-4 border-0">
+              <h3>Saved Activities</h3>
+              <ol>
+                <li>Still bored? 🤔 Pick me, pick me, pick me up!</li>
+              </ol>
+            </div>
+          </aside>
+        </div>
       </main>
     </div>
 
