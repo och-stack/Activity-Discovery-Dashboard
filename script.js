@@ -136,7 +136,6 @@ async function getActivity() { // Ask the API for a random activity
 }
 
 // Save activity
-
 function saveActivity() { // Save the activity the user currently likes
     if (!currentActivity) return; // Do nothing if there is no activity yet
     for (let activity of savedActivities) { // Go through the activities already saved
