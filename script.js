@@ -133,7 +133,6 @@ async function getActivity() { // Ask the API for a random activity
     <p>Price: ${activity.price}</p>
     <p>Accessibility: ${activity.accessibility}</p>
   `;
-  activityCard.style.display = 'block'; // Show the activity card
 }
 
 // Save activity
