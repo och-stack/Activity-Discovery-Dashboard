@@ -6,16 +6,18 @@ const confirmPasswordContainer = document.getElementById("confirm-password-conta
 const authButton = document.getElementById("auth-button"); // Get the button used for login or signup
 const toggleLink = document.getElementById("toggle-link"); // Get the link used to switch between login and signup
 
-// login
+// default account
 let registeredUsername = "admin"; // Start with a default username
 let registeredPassword = "rando@123"; // Start with a default password
 const authMessage = document.getElementById ("auth-message"); // Get the area where login messages appear
 
-function handleAuth() { // Decide what to do when the user clicks the login button
-    if(isSignupMode){ // Check if the user is currently signing up
-        signup(); // If yes, create the new account
-    }else{ // Otherwise
-        login(); // Try to log the user in
+let isSignupMode = false;
+
+function handleAuth() {
+    if(isSignupMode){
+        signup();
+    }else{
+        login(); 
     }
 }
 
@@ -26,12 +28,12 @@ function login() { // Check whether the user's login details are correct
     if (enteredUsername === registeredUsername && enteredPassword === registeredPassword) { // Check if both details match
         dashboard (); // If they match, show the dashboard
     } else { // If they don't match
-        authMessage.textContent = "Incorrect username or password." // Tell the user the details are wrong
+        authMessage.textContent = "Incorrect username or password.";
     }
 }
 
 // handle toggle by changing the sign up and login 
-let isSignupMode = false; // Start the page in login mode
+ // Start the page in login mode
 confirmPasswordContainer.style.display = "none"; // Hide confirm password because we're logging in
 
 function toggleAuth() { // Switch between login and signup mode
