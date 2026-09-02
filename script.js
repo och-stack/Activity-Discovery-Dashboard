@@ -6,7 +6,7 @@ const confirmPasswordContainer = document.getElementById("confirm-password-conta
 const authButton = document.getElementById("auth-button"); // Get the button used for login or signup
 const toggleLink = document.getElementById("toggle-link"); // Get the link used to switch between login and signup
 
-// default account
+// testing account
 let registeredUsername = "admin"; // Start with a default username
 let registeredPassword = "rando@123"; // Start with a default password
 const authMessage = document.getElementById ("auth-message"); // Get the area where login messages appear
