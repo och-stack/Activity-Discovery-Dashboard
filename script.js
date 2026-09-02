@@ -128,10 +128,10 @@ async function getActivity() { // Ask the API for a random activity
   activityName.textContent = activity.activity; // Show the activity name
   // Show the activity information
   activityDetails.innerHTML = ` 
-    <p>Type: ${activity.type}</p> 
-    <p>Participants: ${activity.participants}</p>
-    <p>Price: ${activity.price}</p>
-    <p>Accessibility: ${activity.accessibility}</p>
+    <p>Type: ${activity.type ?? "Not available"}</p> 
+    <p>Participants: ${activity.participants ?? "Not available"}</p>
+    <p>Price: ${activity.price ?? "Not available"}</p>
+    <p>Accessibility: ${activity.accessibility?? "Not available"}</p>
   `;
 }
 
