@@ -168,7 +168,7 @@ function showSavedActivities() { // Display all activities the user has saved
               <strong>${activity.activity}</strong>
               <small>${activity.type || 'Activity'}</small>
             </div>
-            <button onclick="removeSavedActivity(${index})">×</button>
+            <button onclick="removeSavedActivity(${index})">x</button>
           </div>
         </li>
       `;
